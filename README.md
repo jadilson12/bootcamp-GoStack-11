@@ -9,9 +9,10 @@ Esse repositório contém as aulas e códigos desenvolvidos por mim ( Jadilson G
 
 Abaixo você encontra o índice e conteúdo de cada aula:
 
-| Índice | README                                                                                                         |
-| ------ | -------------------------------------------------------------------------------------------------------------- |
-| 00     | [Back-end com Node.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/00-backend-com-nodejs) |
+| Índice | README                                                                                                            |
+| ------ | ----------------------------------------------------------------------------------------------------------------- |
+| 00     | [Back-end com Node.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/00-backend-com-nodejs)    |
+| 01     | [Back-end com React.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/01-frontend-com-reactjs) |  |
 
 Espero que o repositório ajude quem precisar!
 Fiquem a vontade para entrar em contato se tiver alguma dúvida ou sugestão.
