@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  database-service:
+    image: postgres
+    container_name: app-database-gobarber
+    environment:
+      - POSTGRES_DB=gobarber
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=docker
+
+    ports:
+      - '5434:5432'
+    expose:
+      - '5434'
+    volumes:
+      - ./.docker/docker-data/postgres:/var/lib/postgresql/data
