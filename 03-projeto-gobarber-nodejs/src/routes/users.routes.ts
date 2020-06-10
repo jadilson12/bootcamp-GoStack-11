@@ -1,15 +1,18 @@
 import { Router } from 'express';
-import User from '../model/User';
-import UsersService from '../services/UserService';
+
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
+import CreateUsersService from '../services/CreateUserService';
 
 const usersRouter = Router();
+
+usersRouter.use(ensureAuthenticated);
 
 usersRouter.post('/', async (request, response) => {
   try {
     const { name, email, password } = request.body;
 
-    const userService = new UsersService();
-    const user = await userService.create({ email, password, name });
+    const userService = new CreateUsersService();
+    const user = (await userService.exercute({ email, password, name })) as any;
 
     delete user.password;
 
@@ -17,6 +20,10 @@ usersRouter.post('/', async (request, response) => {
   } catch (error) {
     return response.status(400).json({ erroror: error.message });
   }
+});
+
+usersRouter.patch('/avatar', ensureAuthenticated, async (request, response) => {
+  return response.json({ ok: true });
 });
 
 export default usersRouter;
