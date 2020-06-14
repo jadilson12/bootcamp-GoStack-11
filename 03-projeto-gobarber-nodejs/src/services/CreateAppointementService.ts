@@ -7,6 +7,7 @@ interface Request {
   provider_id: string;
 }
 import AppointementRepository from '../repositories/AppointementRepository';
+import AppError from '../errors/AppError';
 
 export default class CreateAppointmentService {
   public async exercute({ date, provider_id }: Request): Promise<Appointment> {
@@ -19,7 +20,7 @@ export default class CreateAppointmentService {
     );
 
     if (findAppointmentInSameDate) {
-      throw new Error('this appointement is already booked');
+      throw new AppError('this appointement is already booked');
     }
 
     const appointment = appointmentRepository.create({

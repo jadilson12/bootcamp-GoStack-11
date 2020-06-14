@@ -21,6 +21,12 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
+    "@typescrit-eslint/no-unused-vars": [
+      "error",
+      {
+        "orgsIgorePattern": "_"
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",

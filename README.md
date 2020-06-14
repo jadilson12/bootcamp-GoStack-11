@@ -9,11 +9,12 @@ Esse repositório contém as aulas e códigos desenvolvidos por mim ( Jadilson G
 
 Abaixo você encontra o índice e conteúdo de cada aula:
 
-| Índice | README                                                                                                                 |
-| ------ | ---------------------------------------------------------------------------------------------------------------------- |
-| 00     | [Back-end com Node.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/00-backend-com-nodejs)         |
-| 01     | [Front-end com React.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/01-frontend-com-reactjs)     |
-| 02     | [Mobile com React-Native](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/02-mobile-com-react-native) |
+| Índice | README                                                                                                                      |
+| ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| 00     | [Back-end com Node.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/00-backend-com-nodejs)              |
+| 01     | [Front-end com React.js](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/01-frontend-com-reactjs)          |
+| 02     | [Mobile com React-Native](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/02-mobile-com-react-native)      |
+| 03     | [Projeto GoBarber com Node.jS](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/03-projeto-gobarber-nodejs) |
 
 Espero que o repositório ajude quem precisar!
 Fiquem a vontade para entrar em contato se tiver alguma dúvida ou sugestão.
