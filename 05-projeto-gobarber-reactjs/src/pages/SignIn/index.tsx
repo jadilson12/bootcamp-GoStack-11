@@ -10,9 +10,10 @@ import logoImg from '../../assets/logo.svg';
 import Input from '../../components/Inputs';
 import Button from '../../components/Button';
 
-import { useAuth } from '../../hooks/AuthContex';
+import { useAuth } from '../../hooks/Auth';
 
 import getValidationErros from '../../utils/getValidationErros';
+import { useToast } from '../../hooks/Toast';
 
 interface SinInFormData {
   email: string;
@@ -22,6 +23,7 @@ const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const { signIn } = useAuth();
+  const { addToast } = useToast();
 
   const handleSubmit = useCallback(
     async (data: SinInFormData) => {
@@ -39,16 +41,25 @@ const SignIn: React.FC = () => {
           abortEarly: false,
         });
 
-        signIn({
+        await signIn({
           email: data.email,
           password: data.password,
         });
       } catch (err) {
-        const errors = getValidationErros(err);
-        formRef.current?.setErrors(errors);
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErros(err);
+
+          formRef.current?.setErrors(errors);
+        }
+
+        addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description: 'Ocorreu um erro ao fazer login, cheque as credenciais.',
+        });
       }
     },
-    [signIn],
+    [addToast, signIn],
   );
 
   return (
