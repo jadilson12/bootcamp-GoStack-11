@@ -1,5 +1,5 @@
 import ICreateUserDto from '@modules/users/dtos/ICreateUserDTO';
-import IUserRepository from '@modules/users/infra/http/repositories/IUsersRepository';
+import IUserRepository from '@modules/users/repositories/IUsersRepository';
 import { getRepository, Repository } from 'typeorm';
 import User from '../entities/User';
 

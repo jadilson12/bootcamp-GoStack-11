@@ -6,7 +6,8 @@ import authConfig from '@config/auth';
 import User from '../infra/typeorm/entities/User';
 
 import AppError from '@shared/errors/AppError';
-import IUserRepository from '../infra/http/repositories/IUsersRepository';
+import IUserRepository from '../repositories/IUsersRepository';
+import IHashProvider from '../providers/HashProvider/modules/IHashProvider';
 
 interface Request {
   email: string;
@@ -23,6 +24,9 @@ export default class AuthenticateUserService {
   constructor(
     @inject('UsersRepository')
     private readonly _userRepository: IUserRepository,
+
+    @inject('IHashProvider')
+    private readonly _hashProvider: IHashProvider,
   ) {}
 
   public async exercute({ email, password }: Request): Promise<Response> {
@@ -32,7 +36,10 @@ export default class AuthenticateUserService {
       throw new AppError('Incorrect email/password combination', 401);
     }
 
-    const passwordMatch = await compare(password, user.password);
+    const passwordMatch = await this._hashProvider.compareHash(
+      password,
+      user.password,
+    );
 
     if (!passwordMatch) {
       throw new AppError('Incorrect email/password combination');
