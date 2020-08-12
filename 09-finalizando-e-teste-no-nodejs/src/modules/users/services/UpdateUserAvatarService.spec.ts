@@ -48,7 +48,7 @@ describe('UpdateUserAvatar', () => {
       avatarFilename: 'avatar.jpg',
     });
 
-    expect(
+    await expect(
       updateUSerAvatar.exercute({
         user_id: 'non-existing-user',
         avatarFilename: 'avatar.jpg',
