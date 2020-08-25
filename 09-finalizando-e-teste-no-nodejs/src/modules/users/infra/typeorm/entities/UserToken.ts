@@ -16,6 +16,9 @@ export default class User {
   token: string;
 
   @Column()
+  user_id: string;
+
+  @Column()
   email: string;
 
   @CreateDateColumn()
