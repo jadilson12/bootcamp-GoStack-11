@@ -19,7 +19,7 @@ export default class CreateUsersService {
     @inject('UsersRepository')
     private readonly _userRepository: IUserRepository,
 
-    @inject('IHashProvider')
+    @inject('HashProvider')
     private readonly _hashProvider: IHashProvider,
   ) {}
 

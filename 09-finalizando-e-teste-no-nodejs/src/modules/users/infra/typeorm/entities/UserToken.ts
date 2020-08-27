@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity('user_token')
+@Entity('user_tokens')
 export default class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -17,9 +17,6 @@ export default class User {
 
   @Column()
   user_id: string;
-
-  @Column()
-  email: string;
 
   @CreateDateColumn()
   created_at: Date;
