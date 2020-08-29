@@ -12,7 +12,6 @@ interface Request {
   email: string;
   password: string;
 }
-
 @injectable()
 export default class CreateUsersService {
   constructor(
