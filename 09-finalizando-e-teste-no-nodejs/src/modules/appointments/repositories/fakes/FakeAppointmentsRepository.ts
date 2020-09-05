@@ -1,14 +1,18 @@
 import * as uuid from 'uuidv4';
-import { isEqual } from 'date-fns';
+import { isEqual, getMonth, getYear } from 'date-fns';
+
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import ICreateAppointmentDto from '@modules/appointments/dtos/ICreateAppointmentDto';
 
 import Appointment from '../../infra/typeorm/entities/Appointement';
+import IFindAllMonthFromProviderDTO from '@modules/appointments/dtos/IFindAllMonthFromProviderDTO';
 
-export default class AppointmentRepository implements IAppointmentsRepository {
+export default class FakeAppointmentRepository
+  implements IAppointmentsRepository {
   private appointments: Appointment[] = [];
 
   constructor() {}
+
   public async findByDate(date: Date): Promise<Appointment | undefined> {
     const findAppointment = this.appointments.find(appointment =>
       isEqual(appointment.date, date),
@@ -17,13 +21,29 @@ export default class AppointmentRepository implements IAppointmentsRepository {
     return findAppointment;
   }
 
+  public async findAllInMonthFromProvider({
+    provider_id,
+    month,
+    year,
+  }: IFindAllMonthFromProviderDTO): Promise<Appointment[]> {
+    const appointments = this.appointments.filter(
+      appointment =>
+        appointment.provider_id === provider_id &&
+        getMonth(appointment.date) + 1 === month &&
+        getYear(appointment.date) === year,
+    );
+
+    return appointments;
+  }
+
   public async create({
     provider_id,
+    user_id,
     date,
   }: ICreateAppointmentDto): Promise<Appointment> {
     const appointment = new Appointment();
 
-    Object.assign(appointment, { id: uuid.uuid(), date, provider_id });
+    Object.assign(appointment, { id: uuid.uuid(), date, provider_id, user_id });
 
     this.appointments.push(appointment);
 

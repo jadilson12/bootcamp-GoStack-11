@@ -1,5 +1,5 @@
 import AppError from '@shared/errors/AppError';
-import FakeAppointementRepository from '../repositories/fakes/FakeAppointementRepository';
+import FakeAppointementRepository from '../repositories/fakes/FakeAppointmentsRepository';
 import CreateAppointmentService from './CreateAppointementService';
 
 let fakeAppointementRepository = new FakeAppointementRepository();
