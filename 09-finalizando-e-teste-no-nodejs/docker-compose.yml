@@ -1,17 +1,31 @@
 version: '3'
 
 services:
-  database-service:
+  postgres-gobarber:
     image: postgres
-    container_name: app-database-gobarber
+    container_name: postgres-gobarber
+    hostname: postgres-gobarber
     environment:
       - POSTGRES_DB=gobarber
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=docker
-
     ports:
       - '5434:5432'
     expose:
       - '5434'
     volumes:
       - ./.docker/docker-data/postgres:/var/lib/postgresql/data
+
+  mongodb-gobarber:
+    image: mongo
+    container_name: mongodb-gobarber
+    hostname: mongodb-gobarber
+    environment:
+      MONGODB_DATABASE: gobarber
+
+    ports:
+      - 27017:27017
+    expose:
+      - '27017'
+    volumes:
+      - ./.docker/mongo/data:/data/db
