@@ -17,8 +17,8 @@ type IResponse = Array<{
 @injectable()
 export default class ListProviderMonthAvailabilityService {
   constructor(
-    @inject('AppointmentsRepository')
-    private appointmentsRepository: IAppointmentsRepository,
+    @inject('AppointmentRepository')
+    private readonly appointmentsRepository: IAppointmentsRepository,
   ) {}
 
   public async exercute({
