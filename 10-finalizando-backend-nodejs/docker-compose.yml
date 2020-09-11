@@ -29,3 +29,13 @@ services:
       - '27017'
     volumes:
       - ./.docker/mongo/data:/data/db
+
+  redis-gobarber:
+    image: redis:alpine
+    container_name: redis-gobarber
+    hostname: redis-gobarber
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - '6379:6379'
+    volumes:
+      - ./.docker/redis/redis-cluster1.tmpl:/usr/local/etc/redis/redis.conf

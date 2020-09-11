@@ -6,6 +6,7 @@ import AppError from '@shared/errors/AppError';
 
 import User from '../infra/typeorm/entities/User';
 import IUserRepository from '../repositories/IUsersRepository';
+import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 
 interface Request {
   name: string;
@@ -20,6 +21,9 @@ export default class CreateUsersService {
 
     @inject('HashProvider')
     private readonly _hashProvider: IHashProvider,
+
+    @inject('CacheProvider')
+    private readonly cacheProvider: ICacheProvider,
   ) {}
 
   public async exercute({ email, password, name }: Request): Promise<User> {
@@ -36,6 +40,8 @@ export default class CreateUsersService {
       password: hasedPassword,
       name,
     });
+
+    await this.cacheProvider.invalidatePrefix('provider-list');
 
     return user;
   }
