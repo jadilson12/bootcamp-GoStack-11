@@ -1,10 +1,11 @@
 import { getRepository, Raw, Repository } from 'typeorm';
 
-import Appointment from '../entities/Appointement';
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import ICreateAppointmentDto from '@modules/appointments/dtos/ICreateAppointmentDto';
 import IFindAllMonthFromProviderDTO from '@modules/appointments/dtos/IFindAllMonthFromProviderDTO';
 import IFindAllDayFromProviderDTO from '@modules/appointments/dtos/IFindAllDayFromProviderDTO';
+
+import Appointment from '../entities/Appointement';
 
 export default class AppointmentRepository implements IAppointmentsRepository {
   private ormRepository: Repository<Appointment>;
@@ -30,7 +31,9 @@ export default class AppointmentRepository implements IAppointmentsRepository {
             `to_char(${dateFieldName}, 'DD-MM-YYYY') = '${parsedDay}-${parsedMonth}-${year}'`,
         ),
       },
+      relations: ['user'],
     });
+
     return appointments;
   }
 
@@ -50,6 +53,7 @@ export default class AppointmentRepository implements IAppointmentsRepository {
         ),
       },
     });
+
     return appointments;
   }
 
