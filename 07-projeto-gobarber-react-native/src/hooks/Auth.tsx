@@ -9,16 +9,24 @@ import React, {
 
 import api from '../services/api';
 
+interface User {
+  id: string;
+  name: string;
+  email: string;
+  // eslint-disable-next-line camelcase
+  avatar_url: string;
+}
+
 interface AuthState {
   token: string;
-  user: unknown;
+  user: User;
 }
 interface SigInCredentials {
   email: string;
   password: string;
 }
 interface AuthContextData {
-  user: unknown;
+  user: User;
   loading: boolean;
   signIn(credentials: SigInCredentials): Promise<void>;
   signOut(): void;
@@ -38,6 +46,7 @@ const AuthProvider: React.FC = ({ children }) => {
       ]);
 
       if (token[1] && user[1]) {
+        api.defaults.headers.authorization = `Bearer ${token[1]}`;
         setData({ token: token[1], user: JSON.parse(user[1]) });
       }
 
@@ -58,7 +67,7 @@ const AuthProvider: React.FC = ({ children }) => {
       ['@GoBaber:token', token],
       ['@GoBaber:user', JSON.stringify(user)],
     ]);
-
+    api.defaults.headers.authorization = `Bearer ${token}`;
     setData({ token, user });
   }, []);
 
