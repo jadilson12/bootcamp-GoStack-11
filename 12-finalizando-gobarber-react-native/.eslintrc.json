@@ -34,6 +34,7 @@
     "import/prefer-default-export": "off",
     "@typescript-eslint/camelcase": "off",
     "import/no-duplicates": "off",
+    "@typescript-eslint/ban-types": "off",
     "camelcase": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-function-return-type": [
