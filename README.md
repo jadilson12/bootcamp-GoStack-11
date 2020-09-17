@@ -9,20 +9,20 @@ Esse repositório contém as aulas e códigos desenvolvidos por mim ( Jadilson G
 
 Abaixo você encontra o índice e conteúdo de cada aula:
 
-| Índice | README                                                                                                                                 |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| 00     | [Back-end com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/00-backend-com-nodejs)                               |
-| 01     | [Front-end com Reactjs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/01-frontend-com-reactjs)                           |
-| 02     | [Mobile com React-Native](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/02-mobile-com-react-native)                      |
-| 03     | [Primeiro projeto com ReactjS](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/03-projeto-gobarber-nodejs)                 |
-| 04     | [Projeto GoBarber com ReactjS](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/04-primeiro-projeto-react)                  |
-| 05     | [Projeto GoBarber com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/05-projeto-gobarber-reactjs)                 |
-| 06     | [Projeto projeto com React-native](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/06-projeto-gobarber-nodejs)             |
-| 07     | [Arquitetura e teste com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/08-arquitetura-e-teste-no-nodejs)         |
-| 08     | [Continuando projeto com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/08-arquitetura-e-teste-no-nodejs)         |
-| 09     | [Finalizandoo GoBarber com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/08-arquitetura-e-teste-no-nodejs)       |
-| 10     | [Finalizandoo GoBarber com ReactjS](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/08-arquitetura-e-teste-no-nodejs)      |
-| 11     | [Finalizandoo GoBarber com React-Native](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/08-arquitetura-e-teste-no-nodejs) |
+| Índice | README                                                                                                                                     |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 00     | [Back-end com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/00-backend-com-nodejs)                                   |
+| 01     | [Front-end com Reactjs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/01-frontend-com-reactjs)                               |
+| 02     | [Mobile com React-Native](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/02-mobile-com-react-native)                          |
+| 03     | [Primeiro projeto com ReactjS](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/03-primeiro-projeto-react)                      |
+| 04     | [Projeto GoBarber com ReactjS](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/04-projeto-gobarber-reactjs)                    |
+| 05     | [Projeto GoBarber com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/05-projeto-gobarber-nodejs)                      |
+| 06     | [Projeto projeto com React-native](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/06-projeto-gobarber-react-native)           |
+| 07     | [Arquitetura e teste com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/07-arquitetura-e-teste-no-nodejs)             |
+| 08     | [Continuando projeto com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/08-continuando%20com-backend-nodejs)          |
+| 09     | [Finalizandoo GoBarber com Nodejs](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/09-finalizando-gobarber-nodejs)             |
+| 10     | [Finalizandoo GoBarber com ReactjS](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/10-finalizando-gobarber-reactjs)           |
+| 11     | [Finalizandoo GoBarber com React-Native](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/11-finalizando-gobarber-react-native) |
 
 Espero que o repositório ajude quem precisar!
 Fiquem a vontade para entrar em contato se tiver alguma dúvida ou sugestão.
