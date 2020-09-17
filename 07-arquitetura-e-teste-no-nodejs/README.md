@@ -1,4 +1,4 @@
-# Aula 08 - Arquitetura e testes no Node.js
+# Aula 07 - Arquitetura e testes no Node.js
 
 Nessa aula, reestruturamos a arquitetura do nosso backend criado na aula 04 ([Iniciando back-end do app](https://github.com/jadilson12/aulas-bootcamp-GoStack11/tree/main/04-projeto-gobarber-nodejs)).
 

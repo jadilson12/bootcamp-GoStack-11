@@ -1,4 +1,4 @@
-# Aula 04 - Primeiro projeto com React
+# Aula 03 - Primeiro projeto com React
 
 Nessa aula foi desenvolvido uma página que faz requisição para a API de repositórios do GitHub e alimenta nossa lista de repositórios na página.
 

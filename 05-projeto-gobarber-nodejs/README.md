@@ -1,4 +1,4 @@
-# Aula 06 - Projeto Gobarber Com nodejs
+# Aula 05 - Projeto Gobarber Com nodejs
 
 Nessa aula foi terminado o desenvolvimento do back-end da aula anterior que recebe requisiçes HTTP através do http://localhost:3333/ e salva os dados em banco de dados Postgres.
 
