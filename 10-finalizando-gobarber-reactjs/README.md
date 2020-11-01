@@ -2,6 +2,8 @@
 
 Nessa aula, voltamos a desenvolver nossa aplicação. Aqui desenvolvemos a algumas páginas da aplicação web do nosso "GoBarber".
 
+![Imagem](https://github.com/jadilson12/bootcamp-GoStack-11/tree/main/10-finalizando-gobarber-reactjs/blob/main/10-finalizando-gobarber-reactjs/github/go-barber-web.gif?raw=true)
+
 ## Ferramentas utilizadas no projeto
 
 - [React.JS](<[https://pt-br.reactjs.org/](https://pt-br.reactjs.org/)>)
